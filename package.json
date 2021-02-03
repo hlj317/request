@@ -1,6 +1,6 @@
 {
   "name": "@cnpm/request",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "http请求客户端.目前支持风控/预发请求转发",
   "repository": "https://github.com/hlj317/request",
   "homepage": "https://github.com/hlj317/request",
