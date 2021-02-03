@@ -1,0 +1,52 @@
+{
+  "name": "@hlj/request",
+  "version": "1.0.0",
+  "description": "http请求客户端.目前支持风控/预发请求转发",
+  "repository": "https://github.com/hlj317/request",
+  "homepage": "https://github.com/hlj317/request",
+  "author": "lijun.huang",
+  "email": "huanglijun317@126.com",
+  "qq": "252833653",
+  "engines": {
+    "node": "10.15.0"
+  },
+  "scripts": {
+    "eslint": "node_modules/.bin/eslint src test",
+    "eslint:fix": "node_modules/.bin/eslint src test --fix",
+    "test": "node_modules/.bin/ava test/*.js --serial",
+    "test:coverage": "node_modules/.bin/nyc npm run test",
+    "test:report": "node_modules/.bin/nyc report --reporter=text-summary"
+  },
+  "main": "index.js",
+  "keywords": [
+  ],
+  "dependencies": {
+    "extend": "^3.0.1",
+    "qs": "^6.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nyc": "^11.4.1",
+    "ava": "^0.24.0",
+    "eslint": "^4.15.0",
+    "babel-eslint": "^8.2.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "rewire": "^3.0.2"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 85,
+    "extension": [
+      ".js"
+    ],
+    "exclude": [
+      "*/config/*",
+      "test/*"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
+  }
+}
